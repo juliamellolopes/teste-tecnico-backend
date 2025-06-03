@@ -1,98 +1,132 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+<h1 align="center"> Teste Técnico Backend 
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+<h3>
+  Este repositório contém a implementação de uma API RESTful desenvolvida com NestJS, TypeScript e MySQL como parte de um teste técnico para vaga de estágio backend.
+</h2>
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## 🚀 Tecnologias Utilizadas
 
-## Description
+- [Node.js](https://nodejs.org/)
+- [NestJS](https://nestjs.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [MySQL](https://www.mysql.com/)
+- [TypeORM](https://typeorm.io/)
+- [JWT](https://jwt.io/)
+- [Swagger](https://swagger.io/)
+- [Insomnia](https://insomnia.rest/) – Utilizado para testar os endpoints da API
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## 🛠️ Como rodar o projeto localmente
 
-## Project setup
+### 📋 Pré-requisitos
 
-```bash
-$ npm install
-```
+- Node.js (versão 18 ou superior recomendada)
+- MySQL instalado e rodando localmente
+- Git
 
-## Compile and run the project
+### 📦 Instalação
+
+1. **Clone o repositório:**
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone https://github.com/juliamellolopes/teste-tecnico-backend.git
 ```
 
-## Run tests
+2. Instale as dependências:
 
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+ ```bash
+npm install
 ```
 
-## Deployment
+3. Configure o arquivo .env:
+Crie um arquivo .env na raiz do projeto com os seguintes dados:
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+ ```bash
+DB_HOST=localhost
+DB_PORT=3306
+DB_USER=root
+DB_PASS=sua_senha \\altere_para_sua_senha
+DB_NAME=teste_tecnico \\nome_do_banco
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
-
-```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+JWT_SECRET=segredo-super-seguro
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+4. Suba o banco de dados:
 
-## Resources
+ ```bash
+CREATE DATABASE teste_tecnico;
+```
 
-Check out a few resources that may come in handy when working with NestJS:
+5. Inicie o projeto:
+   
+ ```bash
+npm run start:dev
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+6. Acesse a documentação Swagger:
+http://localhost:3000/docs
 
-## Support
+## ⚙️ Funcionalidades da API
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+A API fornece os seguintes endpoints:
 
-## Stay in touch
+### 🔐 Autenticação
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- `POST /auth/register`  
+  Cria um novo usuário.
 
-## License
+- `POST /auth/login`  
+  Realiza login com e-mail e senha, retornando um token JWT.
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+### 👤 Usuários
+
+- Os usuários cadastrados podem:
+  - Criar tarefas associadas a si mesmos.
+  - Ver apenas suas próprias tarefas.
+  - Editar e excluir suas tarefas.
+
+### ✅ Tarefas
+
+> Todos os endpoints abaixo requerem um token JWT válido no cabeçalho `Authorization: Bearer <token>`.
+
+- `GET /tasks`  
+  Lista todas as tarefas do usuário autenticado.
+
+- `POST /tasks`  
+  Cria uma nova tarefa com base no corpo da requisição.
+
+- `PUT /tasks/:id`  
+  Atualiza uma tarefa específica do usuário autenticado.
+
+- `DELETE /tasks/:id`  
+  Remove uma tarefa específica do usuário autenticado.
+
+## 🧪 Testes Manuais Sugeridos
+
+Siga os passos abaixo para validar o comportamento esperado da API:
+
+### ✅ Cenário 1: Criação e autenticação de usuários
+
+1. Crie o usuário A via `POST /auth/register`
+2. Crie o usuário B via `POST /auth/register`
+3. Faça login com o usuário A (`POST /auth/login`) e salve o token.
+4. Faça login com o usuário B (`POST /auth/login`) e salve o token.
+
+### ✅ Cenário 2: Criação de tarefas
+
+5. Com o token do usuário A, crie 2 tarefas com `POST /tasks`.
+6. Com o token do usuário B, crie outras 2 tarefas com `POST /tasks`.
+
+### ✅ Cenário 3: Visualização de tarefas
+
+7. Faça um `GET /tasks` com o token do usuário A e verifique que aparecem **somente** as tarefas dele.
+8. Faça o mesmo com o token do usuário B.
+
+### ✅ Cenário 4: Edição de tarefas
+
+9. Tente editar uma tarefa do usuário A com o token do usuário B → deve falhar.
+10. Edite a própria tarefa de cada usuário com sucesso.
+
+### ✅ Cenário 5: Exclusão de tarefas
+
+11. Tente deletar uma tarefa do usuário A com o token do usuário B → deve falhar.
+12. Delete uma tarefa própria com sucesso.
